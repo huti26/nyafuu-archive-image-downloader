@@ -9,7 +9,7 @@ log = logging.getLogger('Logger for nyafuu downloader')
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(message)s',
-    datefmt='%I:%M:%S %p'
+    datefmt='%H:%M:%S'
 )
 workpath = os.path.dirname(os.path.realpath(__file__))
 
