@@ -4,6 +4,10 @@ import os
 import logging
 import argparse
 from tqdm.auto import tqdm
+from fake_useragent import UserAgent
+
+ua = UserAgent()
+user_agent = ua.random
 
 log = logging.getLogger('Logger for nyafuu downloader')
 logging.basicConfig(
@@ -37,7 +41,7 @@ def main():
 
     # needed against 403
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+        'User-Agent': user_agent
     }
 
     # get all image links
